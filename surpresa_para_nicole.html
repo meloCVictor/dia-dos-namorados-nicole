@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Nicole, com amor ❤️</title>
+    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para os ícones da página -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Fonte romântica e elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Configurações personalizadas do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#ffe4e6', // Rosa bem claro
+                            DEFAULT: '#f43f5e', // Rosa/Vermelho principal
+                            dark: '#be123c', // Vermelho escuro
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animação suave de flutuação para elementos decorativos */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Oculta a barra de rolagem, mas mantém a funcionalidade do scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Efeito para as fotos da galeria parecerem reveladas suavemente */
+        .photo-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .photo-card:hover {
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-gray-800 antialiased selection:bg-brand selection:text-white">
+
+    <!-- SEÇÃO HERO: O topo da página, a primeira impressão -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <!-- Elementos decorativos de fundo (Corações flutuantes) -->
+        <div class="absolute top-10 left-10 text-brand opacity-20 animate-float" style="animation-delay: 0s;">
+            <i data-lucide="heart" width="48" height="48" fill="currentColor"></i>
+        </div>
+        <div class="absolute top-32 right-16 text-brand opacity-10 animate-float" style="animation-delay: 2s;">
+            <i data-lucide="heart" width="32" height="32" fill="currentColor"></i>
+        </div>
+        <div class="absolute bottom-20 right-10 text-brand opacity-20 animate-float" style="animation-delay: 1s;">
+            <i data-lucide="heart" width="64" height="64" fill="currentColor"></i>
+        </div>
+
+        <h1 class="font-serif text-5xl sm:text-7xl font-bold text-brand-dark mb-4 drop-shadow-sm px-2">
+            Feliz Dia dos Namorados!
+        </h1>
+        <h2 class="text-2xl sm:text-3xl font-light text-gray-700 mb-8">
+            Para a minha <span class="font-semibold text-brand">Nicole</span> ❤️
+        </h2>
+        
+        <p class="max-w-xl text-lg text-gray-600 mb-12">
+            Preparei essa surpresa para lembrar um pouquinho da nossa história, dos lugares incríveis que já conhecemos e de tudo que ainda vamos viver juntos.
+        </p>
+
+        <!-- Player de Música (Spotify Embed - Zé Neto & Cristiano - Escondendo o Ouro) -->
+        <div class="bg-white/80 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl border border-white max-w-sm w-full z-10">
+            <h3 class="text-sm font-semibold uppercase tracking-widest text-brand-dark mb-4 flex items-center justify-center gap-2">
+                <i data-lucide="music" width="18" height="18"></i>
+                Nossa Música
+            </h3>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0IBCX7PC9NcfFLuyoHxTNt?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <!-- Botão para rolar para a próxima seção -->
+        <a href="#nossa-historia" class="absolute bottom-10 animate-bounce text-brand-dark hover:text-brand transition-colors z-10">
+            <i data-lucide="chevron-down" width="32" height="32"></i>
+        </a>
+    </header>
+
+    <!-- SEÇÃO DA LINHA DO TEMPO: As viagens e localizações -->
+    <section id="nossa-historia" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl text-center text-brand-dark mb-16">Nossos Caminhos</h2>
+            
+            <div class="relative border-l border-brand/30 ml-4 sm:ml-10">
+                
+                <!-- Viagem 1: Bento Gonçalves -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white">
+                        <i data-lucide="trees" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand-light/30 p-6 rounded-2xl hover:shadow-md transition-shadow border-l-4 border-brand">
+                        <span class="text-sm text-brand font-semibold tracking-wide">Ano Novo</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">Bento Gonçalves</h3>
+                        <p class="text-gray-600">
+                            Nossa virada de ano em meio à natureza. A cabana, o mato, a hidro relaxante... um começo de ano perfeito e muito especial para nós.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Viagem 2: Torres -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white">
+                        <i data-lucide="waves" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand-light/30 p-6 rounded-2xl hover:shadow-md transition-shadow border-l-4 border-brand">
+                        <span class="text-sm text-brand font-semibold tracking-wide">Janeiro</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">Torres</h3>
+                        <p class="text-gray-600">
+                            A combinação que a gente precisava: a tranquilidade de uma cabana incrível e a energia da praia ao mesmo tempo. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Viagem 3: Ivoti -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white">
+                        <i data-lucide="utensils" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand-light/30 p-6 rounded-2xl hover:shadow-md transition-shadow border-l-4 border-brand">
+                        <span class="text-sm text-brand font-semibold tracking-wide">Passeio</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">Ivoti</h3>
+                        <p class="text-gray-600">
+                            Aquele dia delicioso que fomos passear, aproveitar a companhia um do outro e, claro, comer muito bem na Fat Bull!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Viagem 4: São Paulo -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white">
+                        <i data-lucide="building-2" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand-light/30 p-6 rounded-2xl hover:shadow-md transition-shadow border-l-4 border-brand">
+                        <span class="text-sm text-brand font-semibold tracking-wide">Março</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">São Paulo</h3>
+                        <p class="text-gray-600">
+                            Nossa aventura na selva de pedra rendeu memórias incríveis, focadas no que há de melhor: muita comida boa e momentos nossos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Viagem 5: Rio de Janeiro -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white">
+                        <i data-lucide="sun" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand-light/30 p-6 rounded-2xl hover:shadow-md transition-shadow border-l-4 border-brand">
+                        <span class="text-sm text-brand font-semibold tracking-wide">Abril</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">Rio de Janeiro</h3>
+                        <p class="text-gray-600">
+                            O turismo inesquecível no Cristo, a energia maravilhosa da praia e aquela baita vista que tínhamos da sacada do prédio, de frente pra Barra da Tijuca.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Próxima Viagem: Gramado -->
+                <div class="mb-12 ml-8 relative group">
+                    <span class="absolute -left-[41px] bg-brand-dark text-white w-8 h-8 rounded-full flex items-center justify-center ring-4 ring-white shadow-lg animate-pulse">
+                        <i data-lucide="heart-handshake" width="16" height="16"></i>
+                    </span>
+                    <div class="bg-brand/10 p-6 rounded-2xl border-2 border-dashed border-brand/50 relative overflow-hidden">
+                        <span class="text-sm text-brand-dark font-semibold tracking-wide">Nosso Próximo Destino...</span>
+                        <h3 class="text-2xl font-serif font-bold text-gray-800 mt-1 mb-2">Gramado</h3>
+                        <p class="text-gray-600 relative z-10">
+                            Nossa próxima aventura já está marcada. Mal posso esperar para viver o friozinho, o fondue e criar mais momentos especiais ao seu lado!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DA GALERIA DE FOTOS -->
+    <section id="galeria" class="py-20 px-4 bg-brand-light/30">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl text-center text-brand-dark mb-4">Um Pouco de Nós</h2>
+            <p class="text-center text-gray-600 mb-12">Os sorrisos e momentos que guardo com carinho.</p>
+            
+            <!-- Grid de Fotos 
+                 Importante: O "src" tenta puxar os seus arquivos reais. 
+                 Se ele não achar (como aqui no preview), o "onerror" carrega uma imagem de fallback bonitinha. -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                
+                <!-- Foto 1 (Cabana/Vista) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="2.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=400&auto=format&fit=crop';" alt="Na cabana" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">A nossa vista</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 (Cristo Redentor) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="8.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1483729558449-99ef09a8c325?q=80&w=400&auto=format&fit=crop';" alt="Cristo Redentor" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Turistando no RJ</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 (Praia) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="10.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop';" alt="Praia" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Sombra e água fresca</p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 (Avião) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="7.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=400&auto=format&fit=crop';" alt="Avião" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Prontos para voar</p>
+                    </div>
+                </div>
+
+                <!-- Foto 5 (Vinhedo/Natureza) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="1.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1502208327471-d5dde4d78995?q=80&w=400&auto=format&fit=crop';" alt="Natureza" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Um dia lindo</p>
+                    </div>
+                </div>
+
+                <!-- Foto 6 (Restaurante SP) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="6.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400&auto=format&fit=crop';" alt="Comida Boa" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Comida boa e você</p>
+                    </div>
+                </div>
+
+                <!-- Foto 7 (Pôr do Sol RJ) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="9.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1495954484750-af469f2f9be5?q=80&w=400&auto=format&fit=crop';" alt="Vista maravilhosa" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Colecionando pores do sol</p>
+                    </div>
+                </div>
+
+                <!-- Foto 8 (Evento/Arrumados) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="4.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=400&auto=format&fit=crop';" alt="Arrumados" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Você estava deslumbrante</p>
+                    </div>
+                </div>
+                
+                <!-- Foto 9 (Selfie Natureza) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="3.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400&auto=format&fit=crop';" alt="Selfie Natureza" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Nós</p>
+                    </div>
+                </div>
+
+                <!-- Foto 10 (Água Pôr do sol) -->
+                <div class="photo-card aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-sm relative group">
+                    <img src="5.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516815231560-8f41ec531527?q=80&w=400&auto=format&fit=crop';" alt="Água Pôr do sol" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-white font-serif text-sm">Sempre com você</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DA CARTA/DECLARAÇÃO FINAL -->
+    <section class="py-24 px-4 bg-white text-center">
+        <div class="max-w-3xl mx-auto bg-brand-light/20 p-8 sm:p-14 rounded-3xl border border-brand/20 shadow-sm relative overflow-hidden">
+            <!-- Decoração no canto -->
+            <div class="absolute -top-6 -right-6 text-brand/10">
+                <i data-lucide="quote" width="120" height="120"></i>
+            </div>
+            
+            <i data-lucide="heart" width="40" height="40" fill="currentColor" class="text-brand mx-auto mb-8 relative z-10 animate-pulse"></i>
+            
+            <div class="relative z-10">
+                <p class="font-serif text-xl sm:text-2xl text-gray-800 leading-relaxed mb-6 italic">
+                    "Minha Nicole,"
+                </p>
+                <p class="font-sans text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                    Olhar para trás e ver todos esses lugares que já conhecemos me faz perceber que a melhor parte da viagem nunca foi o destino, mas sim a companhia. Desde a tranquilidade das cabanas até a correria da cidade grande, cada momento ao seu lado se torna inesquecível.
+                </p>
+                <p class="font-sans text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
+                    A música ali de cima diz tudo o que eu sinto: <strong>Deus tava me preparando esse tempo todo, te deixou pro final, tava escondendo o ouro</strong>. E é exatamente assim que eu me sinto hoje: encontrei o meu maior tesouro. Que a gente continue colecionando carimbos, risadas, pores do sol e memórias perfeitas. Mal posso esperar por Gramado e por todos os outros destinos que o mundo nos reserva. Feliz Dia dos Namorados!
+                </p>
+                <p class="font-serif font-bold text-brand text-2xl">
+                    Com todo o meu amor, <br> 
+                    <span class="text-brand-dark text-xl font-medium mt-2 block">Seu Vitão</span> 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simples -->
+    <footer class="py-8 text-center text-gray-400 text-sm bg-gray-50">
+        <p>Desenvolvido com muito ❤️ para a Nicole</p>
+    </footer>
+
+    <!-- Inicialização dos Ícones (Lucide) -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
